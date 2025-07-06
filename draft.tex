@@ -17,7 +17,13 @@ A data‐driven framework for macro and micro analysis of Battlegrounds matches.
 \section{Introduction}
 目标：
 宏观（对所有玩家）：研究对局整体的的行为(什么时候淘汰多少人？)
+    ‑ 生存分析（Kaplan‑Meier 曲线、Hazard 函数）
+‑ 回合‑淘汰热力图 / 密度图
+‑ 聚类：对局“节奏模板”
 微观（对单个玩家）：MMR与个人能力的关系，
+‑ 多元回归 / LightGBM
+‑ 贝叶斯分层模型（稳定小样本）
+‑ ΔEV / Gold 等细粒度特征
 
 \section{Backgrounds}
 酒馆战棋Solo。
@@ -45,7 +51,7 @@ A data‐driven framework for macro and micro analysis of Battlegrounds matches.
   \end{tabular}
 \end{table}
 
-\subsection{经济}
+\subsection{Coin}
 
 \subsection{Shop}
 
@@ -67,13 +73,27 @@ A data‐driven framework for macro and micro analysis of Battlegrounds matches.
   \end{tabular}
 \end{table}
 
+\section{Materials and Methods}
+
+\subsection{}
 
 \subsection{玩家的能力评定：}
-$\theta_{i,0}$ ：宏观节奏：英雄选择、升本曲线、经济节奏。血量-经济平衡。
-$\theta_{i,1}$ ：商店交互：和商店交互的能力。做出完美決定的正確率。
-$\theta_{i,2}$ ：随从交互：能针对环境让随从发挥出百分之多少实力的能力。
+\begin{align*}
+  \theta_{i,0} &: \text{宏观节奏——英雄选择、升本曲线、经济节奏、血量-经济平衡。} \\
+  \theta_{i,1} &: \text{商店交互——做出近似最优购买决策的增益。} \\
+  \theta_{i,2} &: \text{站位效率——站位带来的期望战斗增益。}
+\end{align*}
 
-Shop:
+\section{Results}
+
+\section{Discussion}
+
+\section{Conclusion}
+
+\section{Acknowledgments}
+
+
+
 
 
 \end{document}
